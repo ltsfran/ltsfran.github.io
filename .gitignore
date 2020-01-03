@@ -1,0 +1,9 @@
+**/package-lock.json
+**/yarn.lock
+**/yarn-error.log
+**/node_modules
+app/client/dist/*
+app/.env.local
+app/.config/
+app/.npm/*
+.vscode

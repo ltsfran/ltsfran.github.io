@@ -1,0 +1,48 @@
+{
+  "name": "dreamtec-spa",
+  "version": "1.0.0",
+  "description": "The project build is property at Pagoefectivo",
+  "main": "index.js",
+  "scripts": {
+    "copy-assets": "cpx \"./client/src/assets/**/*.{jpg,jpeg,png}\" ./client/dist --clean",
+    "start": "webpack-dev-server --config ./config/webpack/config.dev.js --host '0.0.0.0' --port 8080",
+    "prebuild": "rm -rf dist/*",
+    "build": "NODE_ENV=build webpack --config ./config/webpack/config.prod.js",
+    "mockserver": "nodemon ./client/mock/server.js",
+    "predeploy": "npm run build && npm run copy-assets",
+    "deploy": "gh-pages -b master -d client/dist"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "awesome-typescript-loader": "5.2.0",
+    "cpx": "1.5.0",
+    "dotenv": "8.2.0",
+    "dotenv-expand": "5.1.0",
+    "express": "4.17.0",
+    "file-loader": "4.2.0",
+    "gh-pages": "2.2.0",
+    "html-webpack-plugin": "3.2.0",
+    "nodemon": "1.19.0",
+    "react": "16.11.0",
+    "react-dom": "16.11.0",
+    "react-feather": "2.0.0",
+    "react-redux": "7.1.0",
+    "react-router-config": "5.1.0",
+    "react-router-dom": "5.1.0",
+    "redux": "4.0.0",
+    "redux-form": "8.2.0",
+    "redux-thunk": "2.3.0",
+    "styled-components": "4.4.0",
+    "typescript": "3.7.2",
+    "webpack": "4.41.0",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.9.0",
+    "webpack-merge": "4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "12.12.0",
+    "@types/react": "16.9.0",
+    "@types/react-dom": "16.9.0",
+    "@types/styled-components": "4.4.0"
+  }
+}
