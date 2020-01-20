@@ -33,9 +33,9 @@ jobs:
       run: |
         echo Installing dependencies...
         cd ./app
-        npm install
+        yarn install
     - name: Build statics and deploy to GH Pages
       run: |
         echo Deploying...
         cd ./app
-        npm run deploy
+        yarn deploy
