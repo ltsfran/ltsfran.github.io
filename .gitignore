@@ -7,3 +7,4 @@ app/.env.local
 app/.config/
 app/.npm/*
 .vscode
+.DS_Store

@@ -7,7 +7,7 @@ const rootPath = path.join(__dirname, '../../client');
 dotenvOverride();
 
 const publicPath = process.env.PATH_STATIC + '/'
-const logoPath = process.env.PATH_ASSETS + '/logo.png'
+const logoPath = process.env.PATH_ASSETS + '/web-logo.png'
 
 module.exports = {
   devtool: 'source-map',
