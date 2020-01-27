@@ -38,7 +38,7 @@
     "webpack-cli": "3.3.0",
     "webpack-dev-server": "3.9.0",
     "webpack-merge": "4.2.1",
-    "dreamtec-ui": "0.1.1-alpha.4"
+    "dreamtec-ui": "0.1.1"
   },
   "devDependencies": {
     "@types/node": "12.12.0",

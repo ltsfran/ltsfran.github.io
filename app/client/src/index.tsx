@@ -5,7 +5,7 @@ import { Button } from 'dreamtec-ui';
 export const App = () => (
   <>
     <div>How are you world?</div>
-    <Button>Get Started</Button>
+    <Button variant="primary">Get Started</Button>
   </>
 );
 
