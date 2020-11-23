@@ -1,14 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from '@dreamtec-ui/button';
-import { Input } from '@dreamtec-ui/input';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Header, Content } from './components';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+`;
 
 export const App = () => (
   <>
-    <h1>How are you world?</h1>
-    <img src="https://picsum.photos/200" alt="image test for SEO"/>
-    <Input placeholder="Ingrese su nombre" />
-    <Button variant="secondary" isLoading>Get Started</Button>
+    <GlobalStyle />
+    <Wrapper>
+      <Header />
+      <Content />
+    </Wrapper>
   </>
 );
 
