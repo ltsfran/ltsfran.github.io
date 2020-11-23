@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'dreamtec-ui';
+import { Button } from '@dreamtec-ui/button';
+import { Input } from '@dreamtec-ui/input';
 
 export const App = () => (
   <>
     <div>How are you world?</div>
-    <Button variant="primary">Get Started</Button>
+    <Input placeholder="Ingrese su nombre" />
+    <Button variant="secondary" isLoading>Get Started</Button>
   </>
 );
 
