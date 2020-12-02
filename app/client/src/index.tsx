@@ -5,7 +5,7 @@ import { Input } from '@dreamtec-ui/input';
 
 export const App = () => (
   <>
-    <div>How are you world?</div>
+    <h1>How are you world?</h1>
     <Input placeholder="Ingrese su nombre" />
     <Button variant="secondary" isLoading>Get Started</Button>
   </>
