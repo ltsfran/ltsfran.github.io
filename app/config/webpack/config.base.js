@@ -43,7 +43,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin(createVarsDefinePlugin()),
     new HtmlWebpackPlugin({
-      title: 'DreamTec',
+      title: 'DreamTec | Github Pages React App',
       logo: logoPath,
       hash: true,
       template: path.join(rootPath, 'public/index.html')
