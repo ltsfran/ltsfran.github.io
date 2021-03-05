@@ -7,6 +7,7 @@ module.exports = merge(baseConfig, {
     chunkFilename: '[name].js'
   },
   devServer: {
+    https: true,
     open: true,
     historyApiFallback: true,
   },
