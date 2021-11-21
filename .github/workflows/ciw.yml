@@ -39,7 +39,7 @@ jobs:
         echo Building static files...
         cd ./app
         yarn build
-        touch ./app/dist/.nojekyll
+        touch ./dist/.nojekyll
     - name: Deploy to GH Pages
       run: |
         echo Deploying...
