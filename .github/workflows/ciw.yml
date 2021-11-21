@@ -16,32 +16,20 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Set credentials
-      env:
-        USER_NAME: ${{ secrets.USER_NAME }}
-        USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-      run: |
-        echo Setting credentials...
-        git config --global hub.protocol https
-        git config --global user.email "luistupa7@gmail.com"
-        git config --global user.name "Luis Tupa"
-        git remote set-url origin https://$USER_NAME:$USER_PASSWORD@github.com/ltsfran/ltsfran.github.io.git
     - name: Install dependencies
       run: |
-        echo Installing dependencies...
         cd ./app
         yarn install --production
-    - name: Build statics
+    - name: Build static files
       run: |
-        echo Building static files...
         cd ./app
         yarn build
         touch ./dist/.nojekyll
     - name: Deploy to GH Pages
-      run: |
-        echo Deploying...
-        cd ./app
-        yarn deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.6
+      with:
+        BRANCH: gh-pages
+        FOLDER: app/dist
