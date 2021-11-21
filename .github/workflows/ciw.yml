@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [16.x.0]
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
@@ -33,8 +33,14 @@ jobs:
       run: |
         echo Installing dependencies...
         cd ./app
-        yarn install
-    - name: Build statics and deploy to GH Pages
+        yarn install --production
+    - name: Build statics
+      run: |
+        echo Building static files...
+        cd ./app
+        yarn build
+        touch ./app/dist/.nojekyll
+    - name: Deploy to GH Pages
       run: |
         echo Deploying...
         cd ./app
