@@ -1,4 +1,4 @@
-name: CIW
+name: NextJS CI
 
 on:
   push:
