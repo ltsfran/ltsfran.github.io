@@ -42,6 +42,12 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+          <link rel="canonical" href="https://ltsfran.github.io"></link>
+          <meta name="description" content="Portfolio to show my experience as a developer and post some topics about web development. Building animations and interactive experiences, website maintenance security."></meta>
+          <meta property="og:site_name" content="DigitalCode"></meta>
+          <meta property="og:description" content="Portfolio to show my experience as a developer and post some topics about web development. Building animations and interactive experiences, website maintenance security."></meta>
+          <meta property="og:type" content="website"></meta>
+          <meta property="og:url" content="https://ltsfran.github.io"></meta>
         </Head>
         <body>
           <Main />
