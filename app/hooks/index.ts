@@ -7,9 +7,18 @@ export const usePreferredMode = (initialMode: string = 'light') => {
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
     const handlePrefersMode = () => {
-      prefersDarkScheme.matches
-        ? setMode('dark')
-        : setMode('light');
+      const modeStorage = localStorage.getItem('mode');
+      const isDarkModeStorage: boolean = modeStorage === 'dark';
+
+      if (modeStorage) {
+        isDarkModeStorage
+          ? setMode('dark')
+          : setMode('light');
+      } else {
+        prefersDarkScheme.matches
+          ? setMode('dark')
+          : setMode('light');
+      }
     };
 
     handlePrefersMode();
