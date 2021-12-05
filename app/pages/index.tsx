@@ -1,14 +1,9 @@
-import { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
-import { Header } from '@app/features';
+import { Layout } from '@app/features';
 
-const Home: React.FC = () => {
-  const themeContext = useContext(ThemeContext) as any;
-  const mode = themeContext.mode;
-
-  return (
-    <Header mode={mode} />
-  );
-};
+const Home: React.FC = () => (
+  <Layout>
+    <div>Homepage</div>
+  </Layout>
+);
 
 export default Home;
