@@ -2,14 +2,12 @@
 /node_modules
 /.pnp
 .pnp.js
-/app/node_modules
 
 # testing
 /coverage
 
 # next.js
 /.next/
-/app/.next/
 /out/
 
 # production
@@ -29,16 +27,12 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-app/.env.local
-app/.env
 
 # vercel
 .vercel
 
 # dist
-app/dist
+/dist
 
 #cache next
-app/.cache/
-
-passwd
+/.cache
