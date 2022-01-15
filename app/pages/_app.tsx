@@ -1,23 +1,14 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '@app/styles/global';
-import { lightTheme, darkTheme } from '@app/styles/theme';
-import { usePreferredMode } from '@app/hooks';
+import theme from '@app/styles/theme';
+import Layout from '@app/components/Layout';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-  const { mode } = usePreferredMode();
-
-  const theme = {
-    mode,
-    ...(mode === 'light') ? lightTheme : darkTheme
-  };
-
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
+const App: React.FC<AppProps> = ({ Component, pageProps }) => (
+  <ChakraProvider theme={theme}>
+    <Layout>
       <Component {...pageProps} />
-    </ThemeProvider>
-  );
-};
+    </Layout>
+  </ChakraProvider>
+);
 
 export default App;

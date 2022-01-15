@@ -1,14 +1,9 @@
-import Head from 'next/head';
-import { Layout } from '@app/features';
+import Content from '@app/components/Content';
 
 const Home: React.FC = () => (
-  <Layout>
-    <Head>
-      <title>Homepage | Frontend Developer - Luis Tupa</title>
-      <meta property="og:title" content="Homepage | Frontend Developer - Luis Tupa"></meta>
-    </Head>
+  <Content title="Homepage">
     <div>Homepage</div>
-  </Layout>
+  </Content>
 );
 
 export default Home;

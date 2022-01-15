@@ -1,14 +1,9 @@
-import Head from 'next/head';
-import { Layout } from '@app/features';
+import Content from '@app/components/Content';
 
 const Works: React.FC = () => (
-  <Layout>
-    <Head>
-      <title>Works | Frontend Developer - Luis Tupa</title>
-      <meta property="og:title" content="Works | Frontend Developer - Luis Tupa"></meta>
-    </Head>
+  <Content title="Works">
     <div>Works</div>
-  </Layout>
+  </Content>
 );
 
 export default Works;
