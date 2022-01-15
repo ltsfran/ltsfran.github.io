@@ -21,15 +21,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: |
-        cd ./app
         yarn install --production
     - name: Build static files
       run: |
-        cd ./app
         yarn build
         touch ./dist/.nojekyll
     - name: Deploy to GH Pages
       uses: JamesIves/github-pages-deploy-action@4.1.6
       with:
         BRANCH: gh-pages
-        FOLDER: app/dist
+        FOLDER: dist
