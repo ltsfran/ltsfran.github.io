@@ -1,5 +1,5 @@
 import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
+import { mode, createBreakpoints } from '@chakra-ui/theme-tools';
 
 const styles = {
   global: props => ({
@@ -15,5 +15,13 @@ const config = {
   useSystemColorMode: true
 };
 
-const theme = extendTheme({ config, styles })
-export default theme
+const breakpoints = createBreakpoints({
+  sm: '30em',
+  md: '48em',
+  lg: '60em',
+  xl: '75em',
+  '2xl': '90em'
+});
+
+const theme = extendTheme({ config, styles, breakpoints });
+export default theme;

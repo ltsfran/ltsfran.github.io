@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Box, Container } from '@chakra-ui/react';
+import Header from '@app/components/Header';
 
 const Layout: React.FC = ({ children }) => {
   const favicon = `${process.env.PUBLIC_PATH}/favicon.ico`;
@@ -22,6 +23,7 @@ const Layout: React.FC = ({ children }) => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ltsfran.github.io" />
       </Head>
+      <Header />
       <Container maxW="container.md">
         {children}
       </Container>
