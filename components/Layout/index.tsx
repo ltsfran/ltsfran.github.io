@@ -24,7 +24,7 @@ const Layout: React.FC = ({ children }) => {
         <meta property="og:url" content="https://ltsfran.github.io" />
       </Head>
       <Header />
-      <Container maxW="container.md">
+      <Container maxW="container.sm">
         {children}
       </Container>
     </Box>
