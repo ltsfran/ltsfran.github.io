@@ -3,7 +3,7 @@ name: NextJS CI
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
