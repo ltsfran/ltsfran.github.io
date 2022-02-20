@@ -10,6 +10,17 @@ const styles = {
   })
 };
 
+const components = {
+  Button: {
+    variants: {
+      'filled': props => ({
+        bg: '#626ED4',
+        color: mode('#FFFFFF', '#181818')(props)
+      })
+    },
+  },
+};
+
 const config = {
   initialColorMode: 'dark',
   useSystemColorMode: false,
@@ -23,5 +34,5 @@ const breakpoints = createBreakpoints({
   '2xl': '90em'
 });
 
-const theme = extendTheme({ config, styles, breakpoints });
+const theme = extendTheme({ components, config, styles, breakpoints });
 export default theme;
