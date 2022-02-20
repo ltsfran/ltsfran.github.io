@@ -8,6 +8,7 @@ import {
 
 const Profile: React.FC = () => {
   const profileImage = `${process.env.PUBLIC_PATH}/profile.png`;
+  const pointImage = `${process.env.PUBLIC_PATH}/point.png`;
 
   return (
     <Flex
@@ -38,6 +39,7 @@ const Profile: React.FC = () => {
         order={{ base: 1, sm: 2}}
         marginBottom={{ base: '20px', sm: 0 }}
         src={profileImage}
+        fallbackSrc={pointImage}
         alt="Profile image" />
     </Flex>
   );
